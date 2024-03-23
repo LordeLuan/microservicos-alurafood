@@ -32,8 +32,7 @@ public class PedidoController {
 
             return  ResponseEntity.ok(dto);
         }
-        
-//      Pega a variavel de ambiente da porta do servidor
+
         @GetMapping("/porta")
         public String retornaPorta(@Value("${local.server.port}") String porta){
             return String.format("Requisição respondida pela instância executando na porta %s", porta);
